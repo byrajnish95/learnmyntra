@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myntra-home-page</title>
+    <link rel="stylesheet" href="./css/tailwind.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+  <script src="https://kit.fontawesome.com/d5974cb608.js" crossorigin="anonymous"></script>
+
+  <script src="./javascript/script.js"></script>
+</head>
+<body>
+  <nav class="flex items-center h-20 justify-between shadow flex-wrap fixed z-50 w-full bg-white pt-2 mb-4">
+    <button type="button" 
+      class="navbar-toggler text-gray-900 border-0 -left-4 sm:block md:block lg:hidden hover:shadow-none hover:no-underline py-2 px-2.5 bg-transparent focus:outline-none 
+      focus:ring-0 focus:shadow-none focus:no-underline"
+      data-bs-toggle="collapse" data-bs-target="#navbarmenu" aria-controls="navbarSupportedContent" aria-expanded="false" 
+      aria-label="Toggle navigation">
+      <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="w-6" role="img" xmlns="http://www.w3.org/2000/svg" 
+        viewBox="0 0 448 512" >
+        <path
+          fill="currentColor"
+          d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+        ></path>
+      </svg>
+    </button>
+    <div class="flex items-center flex-shrink-0 text-white">
+      <a class="hidden md:hidden lg:block" href="#"><img class="w-12 ml-8" src="../image/MyntraWebSprite_27_01_2021.jpg" alt="myntralogo"></a>
+      <a class="block md:block lg:hidden text-black mr-36"  href="#"><h2>Myntra</h2></a>                    
+    </div> 
+
+
+    <div class="lg:flex sm:hidden md:hidden h-full justify-between font-sans pt-6 text-sm sm:left-0 sm" id="navbarmenu">
+      <div>
+        <a class="uppercase flex h-full w-16 justify-center font-medium hover:border-b-4 hover:border-men-color" href="#" onmouseout="menmenuHidden()" onmouseover="menmenuVisible()">men</a>
+      </div>
+      <div class="">  
+        <div id="men" class="cursor-pointer focus:cursor-auto origin-top-left invisible sm:hidden md:block lg:block absolute mt-12 left-44 max-w-6xl rounded-md bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+          <div class=" bg-white grid grid-cols-5">
+            <div class="text-left p-8">
+              <a href="#"><p class="font-medium text-men-color">Topwear</p></a>
+              <ul class="border-b-2 border-gray-300 pb-4 text-sm font-normal leading-6 text-gray-600">
+                <li><a href="#">T-Shirts</a></li>
+                <li><a href="#">Casual Shirts</a></li>
+                <li><a href="#">Formal Shirts</a></li>
+                <li><a href="#">Sweatshirts</a></li>
+                <li><a href="#">Sweaters</a></li>
+                <li><a href="#">Blazwrs & Coats</a></li>
+                <li><a href="#">Suits</a></li>
+                <li><a href="#">Rain Jackets</a></li>
+              </ul>
+              <a href="#"><p class="font-medium pt-4 text-red-400">Indian & Festive Wear</p></a>
+              <ul class="text-sm font-normal leading-6 text-gray-600">
+                <li><a href="#">Kurtas & Kurta Sets</a></li>
+                <li><a href="#">Sherwanis</a></li>
+                <li><a href="#">NehruJackets</a></li>
+                <li><a href="#">Dhotis</a></li>
+              </ul>
+            </div>
+            <div class="text-left p-8 bg-gray-50">
+              <a href="#"><p class="font-medium text-red-400">Bottomwear</p></a>
+              <ul class="border-b-2 border-gray-300 pb-4 text-sm font-normal leading-6 text-gray-600">
+                <li><a href="#">Jeans</a></li>
+                <li><a href="#">Casual Trouser</a></li>
+                <li><a href="#">Formal Trousers</a></li>
+                <li><a href="#">Shorts</a></li>
+                <li><a href="#">Track Pants & Joggers</a></li>
+              </ul>
+              <a href="#"><p class="font-medium pt-4 text-red-400">Innerwear & Sleepwear</p></a>
+              <ul class="border-b-2 border-gray-300 pb-4 text-sm font-normal leading-6 text-gray-600">
+                <li><a href="#">Briefs & Trunks</a></li>
+                <li><a href="#">Boxers</a></li>
+                <li><a href="#">Vests</a></li>
+                <li><a href="#">Sleepwear & Loungewear</a></li>
+                <li><a href="#">Thermals</a></li>
+              </ul>
+              <a href="#"><p class="font-medium pt-4 text-red-400">Plus Size</p></a>
+            </div>
+            <div class="text-left p-8">
+              <a href="#"><p class="font-medium text-red-400">Footwear</p></a>
+              <ul class="border-b-2 border-gray-300 pb-4 text-sm font-normal leading-6 text-gray-600">
+                <li><a href="#">Casual Shoes</a></li>
+                <li><a href="#">Sports Shoes</a></li>
+                <li><a href="#">Formal Shoes</a></li>
+                <li><a href="#">Sneakers</a></li>
+                <li><a href="#">Sandles & Floaters</a></li>
+                <li><a href="#">Flip Flops</a></li>
+                <li><a href="#">Socks</a></li>
+              </ul>
+              <a href="#"><p class="font-medium py-4 text-red-400">Presonal Care & Grooming</p></a>
+              <a href="#"><p class="font-medium text-red-400">Sunglasses & Frames</p></a>
+              <a href="#"><p class="font-medium pt-4 text-red-400">Watches</p></a>
+            </div>
+            <div class="text-left p-8 bg-gray-50">
+              <a href="#"><p class="font-medium text-red-400">Sports & Active Wear</p></a>
+              <ul class="border-b-2 border-gray-300 pb-4 text-sm font-normal leading-6 text-gray-600">
+                <li><a href="#">Sports Shoes</a></li>
+                <li><a href="#">Sports Sandals</a></li>
+                <li><a href="#">Active T-shirts</a></li>
+                <li><a href="#">Track Pants & Shorts</a></li>
+                <li><a href="#">Tracksuits</a></li>
+                <li><a href="#">Jackets & Sweatshirts</a></li>
+                <li><a href="#">Sports Accessories</a></li>
+                <li><a href="#">Swimwear</a></li>
+              </ul>
+              <a href="#"><p class="font-medium pt-4 text-red-400">Gadgets</p></a>
+              <ul class="text-sm font-normal leading-6 text-gray-600">
+                <li><a href="#">Smart Wearables</a></li>
+                <li><a href="#">Fitness Gadgets</a></li>
+                <li><a href="#">Headphones</a></li>
+                <li><a href="#">Speakers</a></li>
+              </ul>
+            </div>
+            <div class="text-left p-8">
+              <a href="#"><p class="font-medium text-red-400">Fashion Accessories</p></a>
+              <ul class="border-b-2 border-gray-300 pb-4 text-sm font-normal leading-6 text-gray-600">
+                <li><a href="#">Wallets</a></li>
+                <li><a href="#">Belts</a></li>
+                <li><a href="#">Perfumes & Body Mists</a></li>
+                <li><a href="#">Trimmers</a></li>
+                <li><a href="#">Deodorents</a></li>
+                <li><a href="#">Ties, Cufflinks & Pockets squares</a></li>
+                <li><a href="#">Accessory Gift Sets</a></li>
+                <li><a href="#">caps & Hats</a></li>
+                <li><a href="#">Mufflers, Scarves & Gloves</a></li>
+                <li><a href="#">Phone Cases</a></li>
+                <li><a href="#">Ring & Wristwear</a></li>
+                <li><a href="#">Helmets</a></li>
+              </ul>
+              <a href="#"><p class="font-medium py-4 text-red-400">Bags & Backpacks</p></a>
+              <a href="#"><p class="font-medium text-red-400">Luggages & Trolleys</p></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div>
+        <a onmouseout="womenmenuHide()" onmouseover="womenmenuShow()" class="uppercase flex h-full w-20 justify-center font-medium hover:border-b-4 hover:border-pink-500" href="#" >women</a>
+      </div>
+      <div class="">  
+        <div id="women" class="origin-top-left invisible sm:hidden md:block lg:block absolute mt-12 left-44 max-w-6xl rounded-md bg-white ring-1 ring-black ring-opacity-5 focus:outline-none sm:hidden">
+          <div class=" bg-white grid grid-cols-5 capitalize">
+            <div class="text-left p-8">
+              <a href="#"><p class="font-medium text-pink-500">indian & fusion wear</p></a>
+              <ul class="border-b-2 border-gray-300 pb-4 text-sm font-normal leading-6 text-gray-600">
+                <li><a href="#">kurtas & suits</a></li>
+                <li><a href="#">kurtis tunics & tops</a></li>
+                <li><a href="#">ethnic wear</a></li>
+                <li><a href="#">leggings, salwars & churidars</a></li>
+                <li><a href="#">skirts & palazzos</a></li>
+                <li><a href="#">sarees</a></li>
+                <li><a href="#">dress materials</a></li>
+                <li><a href="#">lehenga cholis</a></li>
+                <li><a href="#">dupattas & shawls</a></li>
+                <li><a href="#">jackets</a></li>
+              </ul>
+              <a href="#"><p class="font-medium py-4 text-pink-500">belts Scarves & more</p></a>
+              <a href="#"><p class="font-medium text-pink-500">watches & Wearables</p></a>
+            </div>
+            <div class="text-left p-8 bg-gray-50">
+              <a href="#"><p class="font-medium text-pink-500">western wear</p></a>
+              <ul class="border-b-2 border-gray-300 pb-4 text-sm font-normal leading-6 text-gray-600">
+                <li><a href="#">dresses</a></li>
+                <li><a href="#">tops</a></li>
+                <li><a href="#">tshirts</a></li>
+                <li><a href="#">Jeans</a></li>
+                <li><a href="#">trousers & caparics</a></li>
+                <li><a href="#">shorts & skirts</a></li>
+                <li><a href="#">co-ords</a></li>
+                <li><a href="#">playsuits</a></li>
+                <li><a href="#">jumpsuits</a></li>
+                <li><a href="#">shrugs</a></li>
+                <li><a href="#">sweaters & Sweatshirts</a></li>
+                <li><a href="#">jackets & Coats</a></li>
+                <li><a href="#">blazers & waistcoats</a></li>
+              </ul>
+              <a href="#"><p class="font-medium py-4 text-pink-500">plus Size</p></a>
+            </div>
+            <div class="text-left p-8">
+              <a href="#"><p class="font-medium text-pink-500">maternity</p></a>
+              <a href="#"><p class="font-medium py-4 text-pink-500">Sunglasses & frames</p></a>
+              <a href="#"><p class="font-medium text-pink-500">Footwear</p></a>
+              <ul class="border-b-2 border-gray-300 pb-4 text-sm font-normal leading-6 text-gray-600">
+                <li><a href="#">flats</a></li>
+                <li><a href="#">casual Shoes</a></li>
+                <li><a href="#">heels</a></li>
+                <li><a href="#">boots</a></li>
+                <li><a href="#">sports shoes & Floaters</a></li>
+              </ul>
+              <a href="#"><p class="font-medium pt-4 text-pink-500">sports & active wears</p></a>
+              <ul class=" text-sm font-normal leading-6 text-gray-600">
+                <li><a href="#">clothing</a></li>
+                <li><a href="#">footwear</a></li>
+                <li><a href="#">sports accessories</a></li>
+                <li><a href="#">Sports equipment</a></li>
+              </ul>
+            </div>
+            <div class="text-left p-8 bg-gray-50">
+              <a href="#"><p class="font-medium text-pink-500">lingerie & sleepwear</p></a>
+              <ul class="border-b-2 border-gray-300 pb-4 text-sm font-normal leading-6 text-gray-600">
+                <li><a href="#">bra</a></li>
+                <li><a href="#">briefs</a></li>
+                <li><a href="#">shapwear</a></li>
+                <li><a href="#">sleepwear & Loungewear</a></li>
+                <li><a href="#">Swimwear</a></li>
+                <li><a href="#">camisoles & Thermals</a></li>
+              </ul>
+              <a href="#"><p class="font-medium pt-4 text-pink-500">beauty & personal Care</p></a>
+              <ul class="text-sm font-normal leading-6 text-gray-600">
+                <li><a href="#">makeup</a></li>
+                <li><a href="#">skincare</a></li>
+                <li><a href="#">premium beauty</a></li>
+                <li><a href="#">lipsticks</a></li>
+                <li><a href="#">fragrances</a></li>
+              </ul>
+            </div>
+            <div class="text-left p-8">
+              <a href="#"><p class="font-medium text-pink-500">Gadgets</p></a>
+              <ul class="border-b-2 border-gray-300 pb-4 text-sm font-normal leading-6 text-gray-600">
+                <li><a href="#">smart Wearables</a></li>
+                <li><a href="#">Fitness Gadgets</a></li>
+                <li><a href="#">Headphones</a></li>
+                <li><a href="#">Speakers</a></li>
+              </ul>
+              <a href="#"><p class="font-medium text-pink-500">jewellery</p></a>
+              <ul class="border-b-2 border-gray-300 py-4 text-sm font-normal leading-6 text-gray-600">
+                <li><a href="#">fashion jewellery</a></li>
+                <li><a href="#">fine jewellery</a></li>
+                <li><a href="#">earring</a></li>
+              </ul>
+              <a href="#"><p class="font-medium py-4 text-pink-500">Backpacks</p></a>
+              <a href="#"><p class="font-medium text-pink-500">handbags,bags & Wallets</p></a>
+              <a href="#"><p class="font-medium pt-4 text-pink-500">Luggages & Trolleys</p></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div>
+        <a class="uppercase flex h-full w-16 justify-center font-medium hover:border-b-4 hover:border-orange-500" href="#">kids</a>
+      </div>
+      <div>
+        <a class="uppercase flex h-full w-32 justify-center font-medium hover:border-b-4 hover:border-yellow-500" href="#">home & living</a>
+      </div>
+      <div>
+        <a class="uppercase flex h-full w-20 justify-center font-medium hover:border-b-4 hover:border-teal-500" href="#">beauty</a>
+      </div>
+      <div>
+        <a class="uppercase flex h-full w-24 justify-center font-medium hover:border-b-4 hover:border-rose-500" href="#">studio<sup class="text-red-600 p-1 py-2">new</sup></a>
+      </div>
+    </div>
+    <div class="flex justify-center">
+      <div class="xl:w-96">
+        <div class="input-group relative flex items-stretch md:border lg:border border-solid border-gray-300 rounded w-full">
+          <button class="btn left-0 px-2 text-gray-700 absolute flex items-center" type="button" id="button-addon2">
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="w-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+            </svg>
+          </button>
+          <input type="search" class="form-control hidden md:block lg:block relative flex-auto min-w-0 block w-full pl-4 py-1.5 text-base font-normal 
+          text-gray-700 bg-white bg-clip-padding   transition ease-in-out m-0 focus:text-gray-700 
+          focus:bg-white focus:outline-none" placeholder="Search for products, brands and more" aria-label="Search" aria-describedby="button-addon2">
+          
+        </div>
+      </div>
+    </div>
+    <div class=" flex text-gray-700">
+      <div class="md:w-10 lg:w-10 md:mx-3 lg:mx-2">
+        <i class='fas fa-user-alt pl-3'></i>
+        <span class="text-xs hidden md:inline lg:inline font-medium text-black">Profile</span>
+      </div>
+      <div class="md:w-10 lg:w-10 md:mx-3 lg:mx-2">
+        <i class="far fa-heart pl-4"></i>
+        <span class="text-xs hidden md:inline lg:inline font-medium text-black">Wishlist</span>
+      </div>
+      <div class="md:w-10 lg:w-10 mx-4">
+        <i class="fa fa-shopping-bag pl-1"></i>
+        <span class="text-xs hidden md:inline lg:inline font-medium text-black">Bag</span>
+      </div>
+    </div>
+  </nav>
+  <div>
+    <div class="right-0 fixed bottom-36 w-11 h-72 bg-gray-700 z-40 text-white tracking-wide cursor-pointer" onclick="sideBarOffer()">
+      <div class="w-0 h-0 mx-4 my-6" style="border-right: 14px solid #fff; border-top: 12px solid transparent; border-bottom: 12px solid transparent;"></div>
+      <p class="-rotate-90 whitespace-nowrap w-9 p-1 h-44 align-middle text-center text-2xl font-medium text-white inline-table">FLAT <i class="fa fa-rupee"></i>300 OFF  </p>
+    </div>
+    <div class="fixed bottom-36 right-0 w-full max-w-xl h-72 hidden  bg-gradient-to-r from-pink-300 to-amber-100 z-30 text-slate-700" id="sidebaroffer">
+      <div class="table table-auto h-1/2 w-full">
+        <div class="table-cell align-middle pt-6 pl-10">
+          <div class="font-medium text-xs">AVIAL FLAT</div>
+          <div class="text-5xl font-bold"><i class="fa fa-rupee"></i>300 OFF</div>
+          <div class="text-4xl font-bold">+ FREE SHIPPING</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <div id="myndraslider" class="carousel slide relative carousel-dark py-16" data-bs-ride="carousel">
+    <div class="flex carousel-inner relative w-full mt-16 overflow-hidden">
+      <div class="carousel-item active relative float-left w-full">
+        <a href="#"><img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/4/2/0890b533-380f-4e1e-ade7-4ed2f02b91161648909454453-Biba_Desk_Banner.jpg" class="block w-full">
+        </a>
+      </div>
+      <div class="carousel-item relative float-left w-full">
+        <a href="#"><img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/4/2/ea1634c6-114e-49ee-b02b-c073475012211648909454447-USPA_Desk_Banner.jpg" class="block w-full"></a>
+      </div>
+      <div class="carousel-item relative float-left w-full">
+        <a href="#"><img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/4/2/cfb57fd8-1ae1-4e6e-bd47-f6b6808d6a3d1648909454432-Bower_Desk_Banner.jpg" class="block w-full" alt="..." /></a>
+      </div>
+      <div class="carousel-item relative float-left w-full">
+        <a href="#"><img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/4/2/090785e3-d88e-4198-bb8b-540438b6820e1648909454406-Desktop_1920X504.gif" class="block w-full" alt="..." /></a>
+      </div>
+      <div class="carousel-item relative float-left w-full">
+        <a href="#"><img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2021/11/16/11cc5325-37c6-4490-9adb-6f09ccb2a0781637049244895-luxe-banner.jpg" class="block w-full" alt="..." /></a>
+      </div>
+    </div>
+    <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
+      <button type="radio" data-bs-target="#myndraslider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" ></button>
+      <button type="button" data-bs-target="#myndraslider" data-bs-slide-to="1" aria-label="Slide 2" ></button>
+      <button type="button" data-bs-target="#myndraslider" data-bs-slide-to="2" aria-label="Slide 3" ></button>
+      <button type="button" data-bs-target="#myndraslider" data-bs-slide-to="3" aria-label="Slide 4" ></button>
+      <button type="button" data-bs-target="#myndraslider" data-bs-slide-to="4" aria-label="Slide 5" ></button>
+    </div>
+  </div>
+  <div>
+    <h1 class="uppercase text-slate-700 text-2xl tracking-widest font-semibold ml-8 mt-10 mb-14">deal of the day</h1>
+  </div>
+  <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-7 w-full">
+    <div>
+      <a href="#"><img class="md:pr-2 lg:pr-2" src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/4/2/56abf813-252c-4a6f-888b-b358fa94bcb01648909862600-Mamaearth--Mcaffiene.jpg" alt=""></a>
+    </div>
+    <div>
+      <a href="#"><img class="pr-2" src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/4/2/e481ba5c-df62-48f8-a3a2-7e63aa53510f1648909862571-T-Shirts.jpg" alt=""></a>
+    </div>
+    <div>
+      <a href="#"><img class="pr-2" src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/4/2/f0e2d79f-2a61-4f7a-aca5-de063742aee11648909862555-Best-Of-Indian-Wear.jpg" alt=""></a>
+    </div>
+    <div>
+      <a href="#"><img class="pr-2"src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/4/2/9314d101-2909-4728-b391-f31c58f29c1c1648909862592-Flip-Flops.jpg" alt=""></a>
+    </div>
+    <div>
+      <a href="#"><img class="pr-2" src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/4/2/d08fc67a-375e-428d-901a-950a5bc86ed61648909862579-Smartwatches.jpg" alt=""></a>
+    </div>
+    <div>
+      <a href="#"><img class="pr-2" src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/4/2/fb6664c2-5a31-4fc5-8da8-90a655c6a4ed1648909862564-Tops---Tees.jpg" alt=""></a>
+    </div>
+    <div class="sm:hidden lg:block">
+      <a href="#"><img class="pr-2" src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/4/2/7886e498-4a15-4c8c-91fe-56c00a94da7c1648909862585-Footwear.jpg" alt=""></a>
+    </div>
+  </div>
+  <div>
+    <h1 class="uppercase text-slate-700 text-2xl tracking-widest font-semibold ml-8 mt-10 mb-14">BEST OF MYNTRA EXCLUSIVE BRANDS</h1>
+  </div>
+  <div class="flex flex-wrap w-full">
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-8 w-full">
+      <div>
+        <a href="https://www.myntra.com/mfb-clearance"><img class="pr-2" src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/retaillabs/2022/3/10/b25f89eb-fbeb-4013-829e-32ee5b5daaa01646895183668-Roadster-HRX_Unisex.jpg" alt=""></a>
+      </div>
+      <div>
+        <a href="#"><img  class="pr-2"  src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/bfa5c871-a5a5-4d81-b46e-18aedccfdc9b1644407437913-Kurta_sets-_Anouk-_AAY_-_more.jpg" alt=""></a>
+      </div>
+      <div>
+        <a href="#"><img  class="pr-2"  src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/046147d1-1874-4c10-adb9-6dbd88b606e71644407437923-Kurtas-_Anouk-_Sangria_-_more.jpg" alt=""></a>
+      </div>
+      <div>
+        <a href="#"><img  class="pr-2"  src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/76acf345-fc62-4b49-8b2c-9c0fc9c925311644407437977-Tops_-_Dressberry-_AAY_-_more.jpg" alt=""></a>
+      </div>
+      <div>
+        <a href="#"><img  class="pr-2"  src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/3923c0c1-2260-4f0e-9598-15b6f9d7731c1644407437960-Roadster_and_H-N_Shirts.jpg" alt=""></a>
+      </div>
+      <div>
+        <a href="#"><img  class="pr-2"  src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/eb70855e-98c4-412d-bf20-50804546d57e1644407437883-Dresses_-_Dressberry-_Chemistry_-_more.jpg" alt=""></a>
+      </div>
+      <div>
+        <a href="#"><img  class="pr-2"  src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/eff5a33f-ea24-4e70-84e5-ec4d25ee5c7b1644407437968-Roadster_and_KnK_Tshirts.jpg" alt=""></a>
+      </div>
+      <div class="sm:hidden lg:block">
+        <a href="#"><img  class="pr-2 "  src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/667a71f0-c24b-4a00-a98c-cc6a54a815e91644407437985-Tshirts_-_Roadster-_KnK_-_more.jpg" alt=""></a>
+      </div>
+    
+      <div>
+        <a href="#"><img  class="pr-2"  src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/ffaa74a6-4824-4b19-8936-70ffaef92f001644407437937-M-H_and_HRX_Tshirts.jpg" alt=""></a>
+      </div>
+      <div>
+        <a href="#"><img  class="pr-2"  src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/f9621136-0f00-44d5-aa06-b727a6c8f7c51644407437944-M-H_and_Wrogn_Shirts.jpg" alt=""></a>
+      </div>
+      <div>
+        <a href="#"><img  class="pr-2"  src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/3f41465b-7109-4bb2-bf79-ab89ff2128be1644407437899-HRX_and_Harvard_Trackpants.jpg" alt=""></a>
+      </div>
+      <div>
+        <a href="#"><img  class="pr-2 hidden md:block lg:block"  src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/745cec57-af58-4ba6-8ae1-a3ccbe7c54e91644407437930-Lingerie_-_Loungewear_-_DB-_ETC.jpg" alt=""></a>
+      </div>
+      <div>
+        <a href="#"><img  class="pr-2"  src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/e27ee3af-3f6b-4106-9b20-2b4463c80ba41644407437953-Roadster-_Wrogn_Jeans.jpg" alt=""></a>
+      </div>
+      <div>
+        <a href="#"><img  class="pr-2"  src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/2b15a87a-1d92-4edf-99c2-ec390a38089e1644407437872-Activewear_-_HRX-_Slazenger.jpg" alt=""></a>
+      </div>
+      <div>
+        <a href="#"><img  class="pr-2"  src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/931b0b8f-c14d-4ec7-b923-cf512de991731644407437891-HOP_and_Anouk_Kurtas_-_sets.jpg" alt=""></a>
+      </div>
+      <div>
+        <a href="#"><img class="pr-2"  src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/201d1bfd-287e-47b6-bef6-3c46eac444a51644407437906-Jeans_-_Roadster-_M-H_and_more.jpg" alt=""></a>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h1 class="uppercase text-slate-700 text-2xl tracking-widest font-semibold ml-8 mt-10 mb-14">top picks</h1>
+  </div>
+  <div class="flex w-full">
+    <div class="grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-7">
+      <div>
+        <a href="#"><img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/062cea23-9a6a-44b9-bdd4-87cae6a462311645602543339-Kurta-sets.jpg" alt=""></a>
+      </div>
+      <div>
+        <a href="#"><img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/8d65d400-decd-4f42-902c-a40350a16ed11645602543346-Kurtas.jpg" alt=""></a>
+      </div>
+      <div>
+        <a href="#"><img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/398ee53b-5899-4a9a-9d0b-b35d60c01cb41645602543325-Dresses.jpg" alt=""></a>
+      </div>
+      <div>
+        <a href="#"><img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/2f410d81-7fae-400e-9ecc-b4a8b6df72b91645602543430-Women-Jeans.jpg" alt=""></a>
+      </div>
+      <div>
+        <a href="#"><img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/82a9be01-3032-4725-9500-bcc94366b7931645602543399-Mens-Shirts.jpg" alt=""></a>
+      </div>
+      <div>
+        <a href="#"><img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/c6b09c0f-5c57-472c-a3fc-854ec506a90e1645602543387-Men-T-shirt.jpg" alt=""></a>
+      </div>
+      <div>
+        <a href="#"><img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/f08e2bac-9bed-4f87-b022-0dce8defeded1645602543380-Men-Trousers.jpg" alt=""></a>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h1 class="uppercase text-slate-700 text-2xl tracking-widest font-semibold ml-8 mt-10 mb-14">CATEGORIES TO BAG</h1>
+  </div>
+  <div class="flex flex-wrap w-full">
+    <div class="grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-8 w-full">
+      <div>
+        <a href="#">
+          <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/aa4658b5-d723-4652-9ea1-00456b355c3a1645602467046-Kurta-Sets.jpg" alt="">
+        </a>
+      </div>
+      <div>
+        <a href="#">
+          <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/aae4be67-e611-47f4-b94e-92a16a36df731645602467007-Hangbags.jpg" alt="">
+        </a>
+      </div>
+      <div>
+        <a href="#">
+          <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/0f0be09e-4155-47bf-82e1-51044e7e7fd11645602467052-Kurtas.jpg" alt="">
+        </a>
+      </div>
+      <div>
+        <a href="#">
+          <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/dd4414f8-4e1b-4a22-997e-8e06c0a5ff861645602467167-T-Shirts.jpg" alt="">
+        </a>
+      </div>
+      <div>
+        <a href="#">
+          <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/f9ca5609-b634-42d4-8c08-a8eaebb818b71645602467085-Sarees.jpg" alt="">
+        </a>
+      </div>
+      <div>
+        <a href="#">
+          <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/0b7869d4-f825-4625-b1db-58ad10a45f301645602467093-Shirts.jpg" alt="">
+        </a>
+      </div>
+      <div>
+        <a href="#">
+          <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/b34a30a6-504b-4c94-b7e1-61391d536bc51645602467038-Jewellery.jpg" alt="">
+        </a>
+      </div>
+      <div>
+        <a href="#">
+          <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/b156f76a-26e7-4bce-9941-8a67d3c16f331645602467120-Teens-Wear.jpg" alt="">
+        </a>
+      </div>
+      <div>
+        <a href="#">
+          <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/fb091b07-c275-4578-b08d-b4f93dfe9e841645602466976-Beauty.jpg" alt="">
+        </a>
+      </div>
+      <div>
+        <a href="#">
+          <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/b827f900-ed61-4467-84fa-a6e357787e761645602467079-Plus-Size-Styles_W.jpg" alt="">
+        </a>
+      </div>
+      <div>
+        <a href="#">
+          <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/cd083042-3bb2-4231-8b96-0234fc0ed23f1645602467032-Jeans.jpg" alt="">
+        </a>
+      </div>
+      <div>
+        <a href="#">
+          <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/736f3951-e67b-414f-bfb1-56e2794d441d1645602467114-Sports-Shoes.jpg" alt="">
+        </a>
+      </div>
+      <div>
+        <a href="#">
+          <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/d13255df-c846-4dbd-8458-77ccaba4f9eb1645602467142-Trousers.jpg" alt="">
+        </a>
+      </div>
+      <div>
+        <a href="#">
+          <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/7a774194-94e6-49b5-b8bb-64bf9901bc671645602466989-Casual-Shoes.jpg" alt="">
+        </a>
+      </div>
+      <div>
+        <a href="#">
+          <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/5860c3c2-a639-4625-ac1d-4d55406f128a1645602467134-Track-Pants.jpg" alt="">
+        </a>
+      </div>
+      <div>
+        <a href="#">
+          <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/07e5c29a-2eab-4b2d-b617-6565ffe1f4701645602467025-Innerwear.jpg" alt="">
+        </a>
+      </div>
+      <div>
+        <a href="#">
+          <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/09b3164c-241a-4134-baa1-49b12c56c3901645602466968-Bath-Essentials.jpg" alt="">
+        </a>
+      </div>
+      <div>
+        <a href="#">
+          <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/171a820e-96f0-4b11-a138-03953a7e05481645602467153-Trousers_W.jpg" alt="">
+        </a>
+      </div>
+      <div>
+        <a href="#">
+          <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/054a056f-33e8-4b6c-b747-9b88d7fce0a11645602467174-Watches.jpg" alt="">
+        </a>
+      </div>
+      <div>
+        <a href="#">
+          <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/d3c5cd23-392f-40be-8080-99ffb79c27261645602467128-Tops.jpg" alt="">
+        </a>
+      </div>
+      <div>
+        <a href="#">
+          <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/355b9499-3345-4457-8b3b-2eeceaecf4561645602467020-Infant-Essentials.jpg" alt="">
+        </a>
+      </div>
+      <div>
+        <a href="#">
+          <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/7f814546-b705-4d9b-9ab5-1ddfeca786391645602467001-Flip-Flops.jpg" alt="">
+        </a>
+      </div>
+      <div>
+        <a href="#">
+          <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/12c3b4aa-8160-442f-b93e-e896eafb1b0a1645602467160-T-Shirts-_-Shorts_Kids.jpg" alt="">
+        </a>
+      </div>
+      <div>
+        <a href="#">
+          <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/67783047-7fcc-4530-9368-9be75a713e411645602466995-Dresses.jpg" alt="">
+        </a>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h1 class="uppercase text-slate-700 text-2xl tracking-widest font-semibold ml-8 mt-10 mb-14">DEALS ON TOP BRANDS</h1>
+  </div>
+  <div class="flex flex-wrap w-full">
+    <div class="grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-8 w-full">
+      <div>
+        <a href="#"><img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/retaillabs/2020/9/3/f0dc0024-a8d3-4aec-9e1b-d9b6873b52d51599144996663-Crocs.jpg" alt=""></a>
+      </div>
+      <div>
+        <a href="#"><img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/31/85d5e2e1-fa21-43b0-a352-438e15f1006e1598892141455-Nike.jpg" alt=""></a>
+      </div>
+      <div>
+        <a href="#"><img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/31/22b908fa-38aa-46a6-a3cd-a5ccd46b04ce1598892141560-Puma.jpg" alt=""></a>
+      </div>
+      <div>
+        <a href="#"><img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/retaillabs/2020/9/26/adc58a2c-fa18-4b94-b2d6-4c692a44123d1601115417606-unnamed--6-.jpg" alt=""></a>
+      </div>
+      <div>
+        <a href="#"><img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/31/8238147e-a86e-4fe4-a830-ab5c2c49beba1598892141840-W.jpg" alt=""></a>
+      </div>
+      <div>
+        <a href="#"><img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/retaillabs/2020/9/1/7d0153c1-2fc4-49ec-ac7c-3c402d1ed45f1598948396008-USPA.jpg" alt=""></a>
+      </div>
+      <div>
+        <a href="#"><img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/31/c6a4ec29-f907-4d54-8ed7-83006938b20c1598892141612-Tommy-Hilfiger.jpg" alt=""></a>
+      </div>
+      <div>
+        <a href="#"><img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/26/d1fab403-7742-4a91-a781-2e36bea65a8a1598445950683-Men-s-Apparel---Roadster.png" alt=""></a>
+      </div>
+      <div>
+        <a href="#"><img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/31/4abbda25-8d58-44f7-a986-c80fa31b08b31598892141513-Only.jpg" alt=""></a>
+      </div>
+      <div>
+        <a href="#"><img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/26/72af0092-fd16-4b61-b1fb-e617c089fe251598456566139-image_jpeg1938580873.jpg" alt=""></a>
+      </div>
+      <div>
+        <a href="#"><img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/9/5a5a162e-c4ad-4497-b995-a3c077d25df71596975348916-Women-s-Ethnic-Wear_Vishudh.jpg" alt=""></a>
+      </div>
+      <div>
+        <a href="#"><img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/retaillabs/2020/9/1/da4935ce-8f3f-4273-bfbe-6ded783cf2131598948352513-Levis.jpg" alt=""></a>
+      </div>
+      <div>
+        <a href="#"><img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/31/ee953e28-7ca8-4e08-a6a9-c51c98f823411598892141010-BIBA.jpg" alt=""></a>
+      </div>
+      <div>
+        <a href="#"><img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/retaillabs/2020/9/1/08f15f56-156e-45c8-b0bc-7aecd0b122431598970514602-Veromoda.jpg" alt=""></a>
+      </div>
+      <div>
+        <a href="#"><img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/31/64ec275a-9d3a-432c-b3df-736a7e9518d11598892141670-UCB.jpg" alt=""></a>
+      </div>
+      <div>
+        <a href="#"><img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/26/0390ad1a-1262-4f7a-8f81-37c1644142a91598445950839-Sports---HRX-by-Hrithik-Roshan.png" alt=""></a>
+      </div>
+    </div>
+    <div class="flex w-full">
+
+
+    </div>
+  </div>
+  <footer class="">
+    <div>
+      <div class="bg-gray-100">
+        <div class="grid grid-cols-5 bg-gray-50 px-48 py-3 ">
+          <div>
+            <div>
+              <a href="#" class="uppercase font-medium text-xs">online shoppin</a>
+            </div>
+            <div class="capitalize py-5 text-gray-500 text-sm font-light font-sans">
+              <div><a href="#">men</a></div>
+              <div><a href="#">women</a></div>
+              <div><a href="#">kids</a></div>
+              <div><a href="#">home & living</a></div>
+              <div><a href="#">beauty</a></div>
+              <div><a href="#">gift cards</a></div>
+              <div><a href="#">myntra insider <span class="bg-red text-xs font-normal text-white px-2 pb-px rounded-full">new</span></a></div>
+            </div>
+          </div>
+          <div>
+            <div>
+              <p class="uppercase font-medium pt-2 text-xs">useful link</p>
+            </div>
+            <div class=" py-5 text-gray-500 text-sm font-light font-sans">
+              <div><a href="#">Contact Us</a></div>
+              <div><a href="#">FAQ</a></div>
+              <div><a href="#">T&C</a></div>
+              <div><a href="#">Terms Of Use</a></div>
+              <div><a href="#">Trak Order</a></div>
+              <div><a href="#">Shipping</a></div>
+              <div><a href="#">Cancellation</a></div>
+              <div><a href="#">Returns</a></div>
+              <div><a href="#">Whitehat</a></div>
+              <div><a href="#">Blog</a></div>
+              <div><a href="#">Careers</a></div>
+              <div><a href="#">Privacy policy</a></div>
+              <div><a href="#">Site Map</a></div>
+              <div><a href="#">Corporate Information</a></div>
+            </div>
+          </div>
+          <div class="col-span-2 pr-28">
+            <div>
+              <p class="uppercase font-medium pt-2 text-xs">EXPERIENCE MYNTRA APP ON MOBILE</p>
+            </div>
+            <div class="flex pt-6 pb-4">
+              <div class="px-1">
+                <a href="#">
+                  <img src="https://constant.myntassets.com/web/assets/img/80cc455a-92d2-4b5c-a038-7da0d92af33f1539674178924-google_play.png" alt="">
+                </a>
+                </div>
+              <div class="px-1">
+                <a href="#">
+                  <img src="https://constant.myntassets.com/web/assets/img/bc5e11ad-0250-420a-ac71-115a57ca35d51539674178941-apple_store.png" alt="">
+                </a>
+              </div>
+            </div>
+            <div>
+              <p class="uppercase font-medium pt-2 text-xs">KEEP IN TOUCH</p>
+            </div>
+            <div class="flex text-2xl text-gray-500">
+              <a class="pr-2" href="#"><i class='fab fa-facebook-square'></i></a>
+              <a class="px-2" href="#"><i class='fab fa-twitter'></i></a>
+              <a class="px-2" href="#"><i class='fab fa-youtube'></i></a>
+              <a class="px-2" href="#"><i class='fab fa-instagram'></i></a>
+            </div>
+          </div>
+          <div class="pt-2 pl-4">
+            <div class="flex pb-4">
+              <div class="pr-3">
+                <img src="https://constant.myntassets.com/web/assets/img/6c3306ca-1efa-4a27-8769-3b69d16948741574602902452-original.png" alt="">
+              </div>
+              <div>
+                <p class="text-gray-500 text-sm"><strong class="uppercase text-gray-800 text-base">100% original</strong> gaurantee for all product at myntra.com</p>
+              </div>
+            </div>
+            <div class="flex">
+              <div class="pr-3">
+                <img src="https://constant.myntassets.com/web/assets/img/ef05d6ec-950a-4d01-bbfa-e8e5af80ffe31574602902427-30days.png" alt="">
+              </div>
+              <div>
+                <p class="text-gray-500 text-sm"><b class="text-gray-800 text-base">Return within 30days</b> of recieving your order</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
